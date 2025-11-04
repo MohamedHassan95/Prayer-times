@@ -1,0 +1,88 @@
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Prayer Times - مواقيت الصلاة</title>
+
+        <!--Font awesome library for icons-->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+        <!--Style sheet-->
+        <link href="./output.css" rel="stylesheet">
+    </head>
+    <body class="bg-gradient-to-b from-amber-50 via-amber-100 to-amber-200 min-h-screen flex items-center justify-center" >
+        <div class="app backdrop-blur-md bg-white/40 border border-white/30 rounded-2xl shadow-lg p-6 w-full max-w-2xl text-center ">
+            
+            
+            <div  class=" flex justify-center items-center gap-2 rounded-lg shadow-md p-2 mt-4 w-full max-w-md mx-auto">
+                <select  class="w-64 px-4 py-2 border-2 border-amber-700 rounded-md bg-amber-50 text-gray-800 font-medium shadow-sm focus:outline-none focus:ring-2 focus:ring-amber-700 focus:border-amber-800 hover:border-amber-800 transition" id="city-select">
+                <option value="">اختر المحافظة</option>
+            </select>
+            <button id="search-btn" class="bg-amber-700 text-white px-6 py-2 rounded-md hover:bg-amber-800">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+            </div>
+        
+            
+            <h2 class="mt-8 text-2xl text-amber-800"><i class="fa-solid fa-kaaba"></i> مواقيت الصلاة لمحافظة <span id="city-name">الاسماعيلية</span></h2>
+
+
+            <div class="dates mt-4 text-center text-gray-800">
+                 <p class="text-lg">
+                    اليوم: <strong id="today" class="text-amber-700">الاثنين</strong><br>
+                    الموافق: 
+                    <strong id="date-sun" class="text-amber-700">3 نوفمبر 2025</strong> /
+                     <strong id="date-moon" class="text-amber-700">12 جمادى الأولى 1447 هـ</strong>
+                </p>
+            </div>
+
+
+            <div class="prayers-table ">
+                <table class=" w-full text-center mt-6 border-collapse border border-gray-200 rounded-lg overflow-hidden  ">
+                    <tr class="bg-amber-700 text-white">
+                        <th class="p-2">وقت الاذان</th>
+                        <th class="p-2">الصلاة</th>
+                    </tr>
+                    <tr class="bg-amber-200">
+                        <td id="fajer" class="p-2"></td>
+                        <td class="p-2">الفجر - fajer</td>
+                    </tr>
+                    <tr>
+                        <td id="dhuhr" class="p-2"></td>
+                        <td class="p-2">الظهر - Dhuhr</td>
+                    </tr>
+                    <tr class="bg-amber-200">
+                        <td id="asr" class="p-2"></td>
+                        <td class="p-2">العصر - Asr</td>
+                    </tr>
+                    <tr>
+                        <td id="maghrib" class="p-2"></td>
+                        <td class="p-2">المغرب - Maghrib</td>
+                    </tr>
+                    <tr class="bg-amber-200">
+                        <td id="isha" class="p-2"></td>
+                        <td class="p-2">العشاء - Isha</td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="day-summary mt-7 bg-amber-700 text-white text-center rounded-lg p-4 shadow-md leading-relaxed w-full max-w-md mx-auto">
+                <p class="text-lg">
+                    🕌 مواقيت الصلاة اليوم في مدينة 
+                        <span id="city-name-b" class="font-semibold underline decoration-white">الإسماعيلية</span><br>
+                            تبدأ الساعة <span id="fajer-time" class="font-semibold"></span> لصلاة الفجر<br>
+                            وتنتهي الساعة <span id="isha-time" class="font-semibold"></span> لصلاة العشاء
+                </p>
+            </div>
+
+        </div>
+
+        
+
+
+
+        <script src="cities.js"></script>
+        <script src="script.js"></script>
+    </body>
+    </html>
